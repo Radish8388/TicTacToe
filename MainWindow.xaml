@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
-        Icon="/app.ico"
+        
+        Loaded="Window_Loaded"
         Title="Tic Tac Toe" Height="400" Width="300">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
