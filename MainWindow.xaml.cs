@@ -1,21 +1,8 @@
 ﻿// must import NuGet package System.Speech
 
-using System;
 using System.Speech.Synthesis;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace TicTacToe
 {
@@ -146,6 +133,7 @@ namespace TicTacToe
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             SettingsWindow settingsWindow = new SettingsWindow(difficulty, player);
+            settingsWindow.Owner = this;
             bool? result = settingsWindow.ShowDialog(); // Modal dialog
 
             if (result == true)  // User clicked OK
@@ -178,6 +166,22 @@ namespace TicTacToe
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // load the properties from disk
+            Properties.Settings.Default.Reload();
+
+            // check for upgrade
+            if (Properties.Settings.Default.UpgradeRequired)
+            {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.UpgradeRequired = false;
+                Properties.Settings.Default.Save();
+            }
+
+            this.Left = Properties.Settings.Default.WindowLeft;
+            this.Top = Properties.Settings.Default.WindowTop;
+            this.Width = Properties.Settings.Default.WindowWidth;
+            this.Height = Properties.Settings.Default.WindowHeight;
+
             double screenWidth = SystemParameters.WorkArea.Width;
             double screenHeight = SystemParameters.WorkArea.Height;
 
@@ -194,6 +198,40 @@ namespace TicTacToe
                 this.Left = screenWidth - this.Width;
             if (this.Top + this.Height > screenHeight)
                 this.Top = screenHeight - this.Height;
+
+            if (Properties.Settings.Default.WindowState == "Maximized")
+                this.WindowState = WindowState.Maximized;
+
+            difficulty = Properties.Settings.Default.Difficulty;
+            player = Properties.Settings.Default.Player;
+            if (player == "Os")
+            {
+                playerToken = "O";
+                computerToken = "X";
+            }
+            else
+            {
+                playerToken = "X";
+                computerToken = "O";
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Properties.Settings.Default.WindowState = this.WindowState.ToString();
+            if (this.WindowState == WindowState.Normal)
+            {
+                Properties.Settings.Default.WindowLeft = this.Left;
+                Properties.Settings.Default.WindowTop = this.Top;
+                Properties.Settings.Default.WindowWidth = this.Width;
+                Properties.Settings.Default.WindowHeight = this.Height;
+            }
+
+            // save other properties here
+            Properties.Settings.Default.Difficulty = difficulty;
+            Properties.Settings.Default.Player = player;
+
+            Properties.Settings.Default.Save();
         }
     }
 }

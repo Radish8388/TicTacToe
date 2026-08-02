@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:TicTacToe"
         mc:Ignorable="d"
         Icon="/settings1.png"
-        Title="Settings" Height="175" Width="370">
+        WindowStartupLocation="CenterOwner"
+        Title="Settings"
+        Height="175" Width="370">
     <Grid Margin="0,0,0,0">
         <TextBlock Text="Player" Margin="23,5,0,0"/>
         <RadioButton Name="Xs" Content="Play Xs" GroupName="Difficulty" IsChecked="True" HorizontalAlignment="Left" Margin="23,26,0,0" VerticalAlignment="Top"/>

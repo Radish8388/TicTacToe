@@ -1,6 +1,6 @@
 [Setup]
 AppName=Tic Tac Toe
-AppVersion=1.0
+AppVersion=1.0.1
 DefaultDirName={autopf}\Radish\TicTacToe
 DefaultGroupName=Radish
 SetupIconFile=app.ico
@@ -14,7 +14,7 @@ AppPublisherURL=https://radish-vert.vercel.app
 AppId={{e57f0884-6281-4494-b942-c91d37d83bc0}
 
 [Files]
-Source: "bin\Release\net10.0-windows\publish\win-x64\*"; DestDir: "{app}"; Flags: recursesubdirs
+Source: "bin\Release\net10.0-windows\publish\win-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 
 [Icons]
 Name: "{group}\TicTacToe"; Filename: "{app}\TicTacToe.exe"
