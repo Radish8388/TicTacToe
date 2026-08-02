@@ -15,16 +15,16 @@
       <Value Profile="(Default)">400</Value>
     </Setting>
     <Setting Name="WindowState" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"Normal"</Value>
+      <Value Profile="(Default)">Normal</Value>
     </Setting>
     <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Difficulty" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"Easy"</Value>
+      <Value Profile="(Default)">Easy</Value>
     </Setting>
     <Setting Name="Player" Type="System.String" Scope="User">
-      <Value Profile="(Default)">"Xs"</Value>
+      <Value Profile="(Default)">Xs</Value>
     </Setting>
   </Settings>
 </SettingsFile>

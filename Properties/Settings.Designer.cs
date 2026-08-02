@@ -73,7 +73,7 @@ namespace TicTacToe.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"Normal\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Normal")]
         public string WindowState {
             get {
                 return ((string)(this["WindowState"]));
@@ -97,7 +97,7 @@ namespace TicTacToe.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"Easy\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Easy")]
         public string Difficulty {
             get {
                 return ((string)(this["Difficulty"]));
@@ -109,7 +109,7 @@ namespace TicTacToe.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\"Xs\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Xs")]
         public string Player {
             get {
                 return ((string)(this["Player"]));
