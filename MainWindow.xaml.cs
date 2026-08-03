@@ -28,7 +28,7 @@ namespace TicTacToe
             synth = new SpeechSynthesizer();
             synth.SetOutputToDefaultAudioDevice();
             // Set the volume (0-100)
-            synth.Volume = 100;
+            synth.Volume = 75;
             // Set the speed (-10 to 10)
             synth.Rate = -1;
             synth.SelectVoiceByHints(VoiceGender.Female);
