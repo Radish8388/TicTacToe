@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>app.ico</ApplicationIcon>
-    <Version>1.0.1</Version>
+    <ApplicationIcon>app2.ico</ApplicationIcon>
+    <Version>1.0.2</Version>
     <Company>Radish</Company>
     <Product>Tic Tac Toe</Product>
     <Copyright>© 2026 Radish</Copyright>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="app.ico" />
+    <Content Include="app2.ico" />
   </ItemGroup>
 
   <ItemGroup>

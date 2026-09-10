@@ -1,9 +1,9 @@
 [Setup]
 AppName=Tic Tac Toe
-AppVersion=1.0.1
-DefaultDirName={autopf}\Radish\TicTacToe
+AppVersion=1.0.2
+DefaultDirName={autopf}\Radish\Tic Tac Toe
 DefaultGroupName=Radish
-SetupIconFile=app.ico
+SetupIconFile=app2.ico
 UninstallDisplayIcon={app}\TicTacToe.exe
 LicenseFile=LICENSE.txt
 OutputBaseFilename=TicTacToeSetup
@@ -17,8 +17,8 @@ AppId={{e57f0884-6281-4494-b942-c91d37d83bc0}
 Source: "bin\Release\net10.0-windows\publish\win-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: "{group}\TicTacToe"; Filename: "{app}\TicTacToe.exe"
-Name: "{commondesktop}\TicTacToe"; Filename: "{app}\TicTacToe.exe"; Tasks: desktopicon
+Name: "{group}\Tic Tac Toe"; Filename: "{app}\TicTacToe.exe"
+Name: "{commondesktop}\Tic Tac Toe"; Filename: "{app}\TicTacToe.exe"; Tasks: desktopicon
 
 [Tasks]
 Name: desktopicon; Description: "Create a &desktop shortcut"; GroupDescription: "Additional icons:"
